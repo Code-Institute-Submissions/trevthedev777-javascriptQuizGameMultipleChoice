@@ -209,3 +209,13 @@ saveHighScore = e => {
     localStorage.setItem('highScores', JSON.stringify(highScores));
     window.location.assign('/');
 }
+
+// highscores page
+
+const highScoresList = document.querySelector('#highScoresList');
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+// create a new array for names and key value pairs and displays them in a list
+highScoresList.innerHTML = highScores.map(score => {
+    return `<li class='high-score>${score.name} - ${score.score}`
+}).join('');
