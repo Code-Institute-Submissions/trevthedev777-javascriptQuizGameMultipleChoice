@@ -171,3 +171,41 @@ incrementScore = num => {
 };
 
 startGame();
+
+// end of game
+const username = document.querySelector('#username');
+const saveScore = document.querySelector('#saveScoreBtn');
+const finalScore = document.querySelector('#finalScore');
+const mostRecentScore = document.querySelector('#mostRecentScore');
+
+// save score to your local storage
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+// saves only 5 highest scores
+const MAX_HIGH_SCORES = 5;
+finalScore.innerText = mostRecentScore;
+
+// event Listeners
+username.addEventListener('keyup', () => {
+    saveScoreBtn.disabled = !username.value
+})
+
+saveHighScore = e => {
+    e.preventDefault()
+
+    const score = {
+        score: mostRecentScore,
+        name: username.value
+    }
+
+    highScores.push(score);
+
+    highScores.sort((a,b) => {
+        return b.score - a.score
+    });
+
+    highScores.splice(5);
+
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    window.location.assign('/');
+}
