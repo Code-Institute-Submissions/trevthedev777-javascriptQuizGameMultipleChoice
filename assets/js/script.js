@@ -1,7 +1,7 @@
 // global variables
 const questions = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
-const porgressText = document.querySelector('#progressText');
+const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
@@ -113,5 +113,36 @@ function startGame() {
     score = 0;
     availableQuestions = [...questions] // Spread Operator accesses all questions in the array
     getNewQuestion();
+
+}
+
+function getNewQuestion() {
     
+    // keeps track of the current score
+    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.assign('/end.html')
+    }
+
+    questionCounter++;
+
+    // this will count the questions like 1 of 10 etc...
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+    // this will increase per question the user is asked until the quiz is complete
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
+
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length); // Calculate the value of the question index
+    currentQuestion = availableQuestions[questionsIndex]; // keeps track of the current question being asked
+    question.innerText = currentQuestion.question;
+
+    choices.forEach(choice => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    });
+
+    // removes question from the array and inserts next question 
+    availableQuestions.splice(questionsIndex, 1);
+
+    acceptingAnswers = true;
 }
