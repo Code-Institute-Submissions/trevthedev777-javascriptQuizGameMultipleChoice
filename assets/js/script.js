@@ -1,5 +1,5 @@
 // global variables
-const questions = document.querySelector('#question');
+const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
@@ -43,14 +43,6 @@ let questions = [
         choice3: 'Burnley',
         choice4: 'Queens Park Rangers',
         answer: 1,
-    },
-    {
-        question: 'What year did South Africa host its first democratic elections?',
-        choice1: '1994',
-        choice2: '1989',
-        choice3: '1999',
-        choice4: '2003',
-        answer: 4,
     },
     {
         question: 'From what grain is the Japanese spirit Sake made?',
@@ -104,7 +96,7 @@ let questions = [
 
 // capitilazed variables means the variable will be fixed and unchanged throughout the game
 const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 9;
+const MAX_QUESTIONS = 10;
 
 function startGame() {
 
@@ -146,3 +138,36 @@ function getNewQuestion() {
 
     acceptingAnswers = true;
 }
+
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if (!acceptingAnswers) return
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+        // increments score by 100 points
+        if (classToApply === 'correct') {
+            incrementScore(SCORE_POINTS);
+        }
+
+        // adds the correct class whenever the corrrect question is selected
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        // sets time for us to see what the right or wrong answer is
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion()
+        }, 1000)
+    })
+})
+
+incrementScore = num => {
+    score +=num;
+    scoreText.innerText = score;
+};
+
+startGame();
