@@ -99,5 +99,19 @@ let questions = [
         choice3: 'Eight',
         choice4: 'Five',
         answer: 2,
-    },
+    }
 ]
+
+// capitilazed variables means the variable will be fixed and unchanged throughout the game
+const SCORE_POINTS = 100;
+const MAX_QUESTIONS = 9;
+
+function startGame() {
+
+    // starting variables
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions] // Spread Operator accesses all questions in the array
+    getNewQuestion();
+    
+}
