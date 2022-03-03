@@ -20,109 +20,34 @@ My JS quiz game is a general knowledge quiz of 10 questions, it is a single play
 
 * 404 Page
     * A 404 page will be implemented and will display if a user navigates to a broken link.
-    * The 404 page will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need  of the browsers back button.
+    * The 404 page shares the same layout as the game menu and will hopefully allows users to not even notice the wrong address was inserted
 
-![404](docs/readme_images/404_image.PNG)
+![404](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/404.png?raw=true)
 
 *Home Page*
 
-- Game Instructions
-  - The home page content contains full game instructions so that the user is able to understand how to play the game.
+- Start game link to take the user staright to the first question
 
-![Home Page Image](docs/readme_images/home_page.PNG)  
-- Game Start Button
-  - A button will be on the home page that when clicked will direct the user to the main poker game.
-  - This will allow the user to start the game after they have read and understood how the game works.
+![Home Page Image](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/home%20screen.png?raw=true)  
 
-![Play game image](docs/readme_images/play_game_button.PNG)
+-  the user just needs to click the Game Start Button and start playing
 
 *Game Page*
 
-- Chip Balance
+- Questions
 
-  - Below the main game area, the users current chips are displayed which is defaulted to 1000 starting chips when the user intiates game play. The users chip balance is displayed at all times. The chip balance is updated when the user bets or wins a hand.
-  - This will allow the user to keep track of how many chips they have in order to decide how much they would like to bet.
+  - Each question is based on general knowledge and can prove to be really tricky, they are displayed on the center of the screen under neath the hud display and aboue the answer selections
+  - There is a question progress bar and counter that will notify the ueser when they are reaching towards the end of the game
+  - There is a score generator on the top right hand side of the screen that increments on every correct answer
 
-![Chip balance image](docs/readme_images/current_chips.PNG)
-- Betting Functionality
+![Game Board Image](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/gamescreen.png?raw=true)
 
-  - Before the user initiates the round with the deal button, there is an input box that will allow them to bet some of their chips on the hand. The input is type number and is set to default at 10 and increments / decrements in multiples of 10. A user cannot bet more chips than their current chip balance.
-  - This will allow the user to gamble their chosen amount on each hand before the round is started.
+- End of game screen
 
-![Chip bet image](docs/readme_images/bet_input.PNG)
-- Deal
+  - once the user has ended the quiz, they are brought to the end of game screen which gives them their score and an option to return to the home page or jump straight back to the first question  
 
-  - In order to start the poker hand, there will be a deal button just under the main table. When this button is clicked, it will draw the initial five cards for the poker hand.
-  - This will allow the user to start the hand once they have added their bet amount and are ready to proceed.
-
-![deal button image](docs/readme_images/deal_button.PNG)
-- Cards
-
-  - The game board contains the cards for the poker game. A Maximum of five cards will be on the board at any one time. Initially cards will be face down before deal and will be shown faceup when deal button is clicked.
-  - This will allow the user to keep track of what cards are in their hand.
-
-![Cards face down image](docs/readme_images/cards_face_down.PNG)
-![Cards face up image](docs/readme_images/cards_face_up.PNG)
-- Hold
-
-  - After the hand has been dealt and five cards are displayed on the game board, you can hold cards before drawing new ones. You keep the cards you hold and the remaining cards will be replaced with new ones. In order to hold the card, you click it and the card will appear to raise and visible text will be displayed with 'Hold'.
-  - This will allow users to keep the best cards from their hand.
-
-![Cards hold image](docs/readme_images/cards_hold.PNG)
-- Draw
-
-  - Once the user has decided which cards they want to hold, if any, they can click the draw button to get new cards.
-  - This will allow users to get new cards in an attempt to get a better hand than the original dealt cards.
-
-![Cards face up image](docs/readme_images/draw_button.PNG)
-- Gamble Winnings   
-
-  - If the user has a winning hand after they have drawn the cards, they will be given the option to gamble those winnings or bank the chips. The user will be presented with a single card and they have to guess whether the next card drawn will be higher or lower than the current card. This will be done by using the respective 'High and 'Low' buttons.
-  - If the user guesses wrong, they will lose the winnings.
-  - If the user guesses right, the winnings will be doubled on each successful guess up to a maximum of 5 cards on the table and winning chips will be added to the current chip balance.
-  - If the user decides to bank the winnings, the winning chips will be added to the current chip balance. The user will then be able to start the next hand.
-  - This will allow the user gamble and potentially increase their winning chips or take the safe option and bank the winnings.
-
-![Cards hold image](docs/readme_images/gamble_winnings.PNG)
-
-*Winning Hands*
-- Royal Flush
-  - Ace, King, Queen, Jack and 10 of same suit
-    - Wins: Bet x 500
-           
-            
-- Straight Flush
-  - Any 5 cards of the same suit in order
-    - Wins: Bet x 60
-          
-           
-- 4 of a Kind
-  - 4 cards of the same value and any other card
-  - Wins: Bet x 25          
-- Full House
-  - 3 cards of same value and 2 cards of another value
-    - Wins: Bet x 10
-- Flush
-  - 5 cards of the same suit
-    - Wins: Bet x 5
-            
-- Straight
-  - Any 5 cards in order
-    - Wins: Bet x 4
-          
-- 3 of a Kind
-  - 3 cards of the same value
-    - Wins: Bet x 3
-            
-- 2 Pairs
-  - 2 pairs of the same value
-    - Wins: Bet x 2
-            
-- Pair - Jacks or Better
-  - pair of J, Q, K or A
-    - Wins: Bet x 1
-          
-![Cards hold image](docs/readme_images/winning_hands.PNG)
+  ![End Game Image](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/gamescreen.png?raw=true)
+ 
 
 ### Features left to implement
 - Add functionality to play a head to head game against computer or other player online
