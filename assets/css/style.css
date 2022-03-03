@@ -285,7 +285,7 @@ h2 {
         width: 100%;
     }
 
-    .choice-container {
+    .container .choice-container {
         min-width: 10rem;
     }
     #hud {

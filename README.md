@@ -120,178 +120,98 @@ Issue #1: Styles not loading into website.
 
 Fix: Correct paths were given to link the documents together for all styles and JS technologies to work smoothly.
 
-Issue #2: .
+Issue #2: Script not loading into website.
 
-Fix: Cards were given the tabindex attribute with a value of 1 to ensure a keyboard can tab to them.
+Fix: Correct paths were given to link the documents together for all styles and JS technologies to work smoothly.
 
-Issue #3: Cards were not held with the enter key so users could not hold the card unless clicked with a mouse.
+Issue #3: 404.html not loading into the correct page
 
-Fix: Cards were given an onkeyup event and called a new function which detects if the enter key was pressed and then clicks the card to allow the user to hold the card.
+Fix: renamed the document to the correct name.
+
+Issue #4: Total correct score not calculating at the end of the game
+
+Fix:
+
+Issue #5: Hover effect not working on buttons
+
+Fix: renamed elemts to corresponding class names
+
+Issue #6: Progress Bar not incrementing per question
+
+Fix: targeted the empty progress bar value using the DOM
 
 **Navigation Links**
 
-Testing was performed to ensure all navigation links on the respective pages, navigated to the correct pages as per design. This was done by clicking on the navigation links on each page.
-
-| Navigation Link | Page to Load    |
-| --------------- | --------------- |
-| Home            | index.html      |
-| Play            | game.html       |
+Testing was performed on 404.html, index.html and end.html to ensure that the game directed to home screen
 
 Links on all pages navigated to the correct pages as exptected.
 
-**Footer Link**
-
-Testing was performed to ensure the GitHub icon in the footer opened the github profile of Gareth-McG in a new tab. This was done by clicking the GitHub icon.
-
-Gareth-McG's Github profile opened in a new tab.
-
 **Game Play**
 
-**Winning Hands**
+* User starts the game and answers the question
+* Question has timeout function to automatically progress the game so user does not have to select a next question manually
+* Progress bar increases per question
+* Score increments on every correct answer
 
-All hands were tested to ensure they were recorded as the correct 'winning hands' with the correct multipliers. This was done by stubbing the hands using the following arrays:
-
-```
-Royal Flush Test
-myHand[0] = deck[09];
-myHand[1] = deck[10];
-myHand[2] = deck[11];
-myHand[3] = deck[12];
-myHand[4] = deck[0];
-
-Straight Flush Test
-myHand[0] = deck[31];
-myHand[1] = deck[32];
-myHand[2] = deck[33];
-myHand[3] = deck[34];
-myHand[4] = deck[35];
-
-Flush Test
-myHand[0] = deck[47];
-myHand[1] = deck[44];
-myHand[2] = deck[51];
-myHand[3] = deck[41];
-myHand[4] = deck[45];
-
-4 of a kind Test
-myHand[0] = deck[7];
-myHand[1] = deck[20];
-myHand[2] = deck[33];
-myHand[3] = deck[46];
-myHand[4] = deck[43];
-
-Full House
-myHand[0] = deck[4];
-myHand[1] = deck[17];
-myHand[2] = deck[36];
-myHand[3] = deck[49];
-myHand[4] = deck[10];
-
-Straight
-myHand[0] = deck[15];
-myHand[1] = deck[3];
-myHand[2] = deck[4];
-myHand[3] = deck[31];
-myHand[4] = deck[45];
-
-Straight A2345
-myHand[0] = deck[0];
-myHand[1] = deck[14];
-myHand[2] = deck[28];
-myHand[3] = deck[42];
-myHand[4] = deck[4];
-
-3 of a kind
-myHand[0] = deck[11];
-myHand[1] = deck[24];
-myHand[2] = deck[37];
-myHand[3] = deck[31];
-myHand[4] = deck[41];
-
-2 pair
-myHand[0] = deck[35];
-myHand[1] = deck[48];
-myHand[2] = deck[51];
-myHand[3] = deck[12];
-myHand[4] = deck[18];
-
-pair of queens
-myHand[0] = deck[24];
-myHand[1] = deck[50];
-myHand[2] = deck[43];
-myHand[3] = deck[12];
-myHand[4] = deck[18];
-```
-All hands functioned as expected and gave the correct types and winnings.
-
-**Hold Cards**
-
-Testing was performed to ensure cards could be held and when new cards were drawn, the selected cards remained. Thhis was done by selecting 2 cards from the dealt cards, then pressing the draw button.
-
-When new cards were drawn, the held cards were still in the drawn cards as expected.
+Timeout function works correctly
 
 **Game Board**
 
-Testing was done to ensure the correct messages were displayed at the appropriate time by playing the game. The following messages are displayed:
+* Correct Answer displays green background upon selection
+* Inorrect Answer displays red background upon selection, and does not show the right answer so user can play again
 
-* No winning hand - Displayed when no winning hand has been dealt.
-* Place bet instructions - Shown when facedown cards are drawn.
-* Hold card instructions - Shown after user has clicked the 'Deal' button.
-* Winning hand name displayed - Shown if winning hand after user has clicked the draw button after a deal/hold.
-* High low instructions - Shown during high low game that is initiated if a user had a winning hand.
-* Lose High/Lo with wrong High guess - Shown if user guesses 'High' but the card drawn was a lower value than the previous card.
-* Lose High/Lo with wrong Low guess - Shown if user guesses 'Low' but the card drawn was a higher value than the previous card.
+All displays and tranistions displayed correctly
 
-All messages were displayed as expected.
+**End of Game**
 
-**High/Low**
+* Navigation to start of quiz and home page
 
-High/Low game was tested to ensure the game functioned as expected by playing the game:
-* If the card drawn was higher and the user clicked the "High" button, that the next card was drawn as expected.
-* If the card drawn was lower and the user clicked the "Low" button, that the next card was drawn as expected.
-* If the card drawn was lower and the user clicked the "High" button, that the next card was not drawn and the High/Low game ends as expected.
-* If the card drawn was lower and the user clicked the "High" button, that the next card was not drawn and the High/Low game ends as expected.
-* If the maximum limit of 5 cards has been drawn, the high low game ends and winnings are added to the current chip balance as expected.
-* At any stage in the High/Lo game, if the 'Bank Winnings' button is clicked, the current winnings are added to the current chips value.
 
 **Validator Testing**
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+  - No errors were returned when index.html passing through the official [W3C validator](https://validator.w3.org)
 
-![Home HTML Validator Results](docs/readme_images/home_validator.PNG)
+![Index HTML Validator Results]()
 
-![Game Page](docs/readme_images/game_validator.PNG)
+ - No errors were returned when game.html passing through the official [W3C validator](https://validator.w3.org)
 
-![404 Page](docs/readme_images/404_validator.PNG)
+![Game HTML Validator Results]()
+
+ - No errors were returned when end.html passing through the official [W3C validator](https://validator.w3.org)
+
+![End HTML Validator Results]()
+
+ - No errors were returned when 404.html passing through the official [W3C validator](https://validator.w3.org)
+
+![404 HTML Validator Results]()
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
 
-![CSS Validator Results](docs/readme_images/css_validator.PNG)
+![CSS Validator Results]()
 
 - JavaScript
   - No errors were returned when passing through the [JShint validator](https://jshint.com/)
-  - A warning appeared for one function as an unused variable but the function is being used directly as an onkeyup event on the card divs.
 
-![JavaScript Validator Results](docs/readme_images/js_validator.PNG)
+![JavaScript Validator Results]()
 
 **Lighthouse Report**
 
-Lighthouse report generated showed a 93 SEO rating due to no meta descriptions. Meta descriptions were then added to the page to raise this. The lowest score on any section was 94 for performance.
 
-![Lighthouse report](docs/readme_images/lighthouse.PNG)
+
+![Lighthouse report]()
 
 
 ## Deployment
 
 ### Version Control
 
-The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘Portfolio-Project-2-Poker-Fun’.
+The site was created using Gitpod and pushed to github to the remote repository ‘Portfolio-Project-2-Poker-Fun’.
 
 The following git commands were used throughout development to push code to the remote repo:
 
-```git add <file>``` - This command was used to add the file(s) to the staging area before they are committed.
+```git add .``` - This command was used to add the file(s) to the staging area before they are committed.
 
 ```git commit -m “commit message”``` - This command was used to commit changes to the local repository queue ready for the final step.
 
@@ -306,7 +226,7 @@ The following git commands were used throughout development to push code to the 
   - Click 'Save'
   - A live link will be displayed in a green banner when published successfully.
 
-The live link can be found here - https://gareth-mcgirr.github.io/Portfolio-Project-2-Poker-Fun
+The live link can be found here - https://github.com/trevthedev777/javascriptQuizGameMultipleChoice
 
 ### Clone the Repository Code Locally
 
@@ -322,7 +242,4 @@ The project will now have been cloned on your local machine for use.
 
 ## Credits 
 
-* [Create the deck of cards and shuffle](https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript)
-    * Code was used from this site to create the deck of cards and shuffle. Styles were changed to suit styling on my Website.
-* Website Logo and felt background image was created by my wife [Daisy McGirr](https://github.com/Daisy-McG) using Canva.
-* My Mentor Chris Quinn for his guidance and support throughout my project.
+* 
