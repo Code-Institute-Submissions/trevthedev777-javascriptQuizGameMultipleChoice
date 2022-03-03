@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    font-family: 'Nova Square', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 h1 {
@@ -101,7 +101,7 @@ h2 {
 
 }
 
-#highscore-btn:hover {
+#dev-btn:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 0, 0.5);
 }
@@ -187,6 +187,16 @@ h2 {
 }
 
 /* End of game screen */
+
+.btn-home {
+    background: linear-gradient(9deg, rgb(255, 247, 9) 0%, rgb(240, 221, 6) 100%);
+    color: black;
+}
+
+.btn-home i {
+    color: black;
+}
+
 .end-form-container {
     width: 100%;
     display: flex;
@@ -195,24 +205,10 @@ h2 {
     max-width: 30rem;
 }
 
-input::placeholder {
-    color: #aaa;
-}
-
-#username {
-    margin-bottom: 3rem;
-    width: 100%;
-    outline: none;
-}
-
 #end-text {
     font-size: 2.4rem;
     color: #fff;
     text-align: center;
-}
-
-#saveScoreBtn {
-    border: none;
 }
 
 .fa-home {
@@ -221,18 +217,10 @@ input::placeholder {
     color: white;
 }
 
-/* High Scores Page */
-#highScoresList {
-    list-style: none;
-    margin-bottom: 4rem;
-}
 
-.high-score {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
-}
 
 /* media queries */
+
 /* for screens 768px wide and smaller */
 @media screen and (max-width:840px) {
     .container .choice-container {
@@ -251,6 +239,10 @@ input::placeholder {
         text-align: center;
         font-size: 3rem;
     }
+
+    .btn {
+        width: 75%;
+    }
 }
 
 /* for screens 450px wide and smaller */
@@ -260,18 +252,82 @@ input::placeholder {
         min-width: 5rem;
     };
 
-    /* #progressBar {
-        width: 10rem;
-        height: 10px;
-        border: 0.1rem solid rgb(11, 233, 36);
+    .btn {
+        width: 50%;
+    }
+}
+
+/* for screens 412px wide and smaller */
+@media screen and (max-width:412px) {
+
+    #game {
+        width: 100%;
+    }
+
+    #question {
+        margin-top: 0;
+    }
+
+    #score {
+        margin-bottom: 1rem;
+    }
+  
+    h1 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .choice-container {
+        min-width: 10rem;
+    }
+    #hud {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .hud-prefix {
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .hud-main-text {
+        text-align: center;
+    }
+
+    #progressText {
+        margin-bottom: 2rem;
+    }
+
+    
+    /* progressbar for progression of game styles */
+    #progressBar {
+        display: block;
+        width: 20rem;
+        height: 3rem;
+        border: 0.2rem solid rgb(11, 233, 36);
         margin-top: 2rem;
         border-radius: 50px;
         overflow: hidden;
+        margin: 0 auto;
+    }
+    .hud-prefix {
+        margin-top: 2rem;
     }
     
     #progressBarFull {
         height: 100%;
         background: rgb(11, 233, 36);
-        width: 0%;
-    } */
+        width: 50%;
+    }
+    
 }
