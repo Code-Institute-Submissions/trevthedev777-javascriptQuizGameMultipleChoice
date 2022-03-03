@@ -46,27 +46,16 @@ My JS quiz game is a general knowledge quiz of 10 questions, it is a single play
 
   - once the user has ended the quiz, they are brought to the end of game screen which gives them their score and an option to return to the home page or jump straight back to the first question  
 
-  ![End Game Image](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/gamescreen.png?raw=true)
+  ![End Game Image](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/end%20game%20screen.png?raw=true)
  
 
 ### Features left to implement
-- Add functionality to play a head to head game against computer or other player online
-- Game sounds
-- Animated transitions for cards when being dealt eg. flipping each card around from face down to face up.
+- Countdown Timer
+- Different difficulty settings
+- Scoreboard for single player mode
+- Head to Head remote play
+- Leaderboard when playing online through a server
 
-## Wireframes
-
-- Home page
-
-![Home page wireframe](docs/wireframes/home_wireframes.JPG)
-
-- Game page
-
-![Home page wireframe](docs/wireframes/game_page.JPG)
-
-- 404 page
-
-![Home page wireframe](docs/wireframes/404_page.JPG)
 ## Technolgies
 
 - HTML
@@ -75,58 +64,48 @@ My JS quiz game is a general knowledge quiz of 10 questions, it is a single play
   - The Website was styled using custom CSS in an external file.
 - JavaScript
   - The game play logic was created using JavaScript in an external file.
-- Visual Studio Code
-  - The website was developed using Visual Studio Code IDE
+- Gitpod
+  - The website was developed using Gitpod
 - GitHub
   - Source code is hosted on GitHub and delpoyed using Git Pages.
 - Git
   - Used to commit and push code during the development of the Website
 - Font Awesome
-  - Icon obtained from https://fontawesome.com/ was used for GitHub Icon in the footer.
+  - Icons obtained from https://fontawesome.com/ 
 - Favicon.io
-  - favicon files were created at https://favicon.io/favicon-converter/
-- balsamiq
-  - wireframes were created using balsamiq from https://balsamiq.com/wireframes/desktop/#
-- Canva
-  - This was used to create the logo in header and make the images for cards 
+  - favicon file created at https://favicon.io/favicon-converter/
 
 ## Testing
 
 ### Responsiveness
 
-All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in [WCAG 2.1 Reflow criteria for responsive design](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) on Chrome, Edge, Firefox and Opera browsers.
+All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in [WCAG 2.1 Reflow criteria for responsive design](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) on Chrome, Edge, Firefox and Opera browsers, as well as tested on Samsung S20FE and Samsung Galaxy 8 and Iphone 10 model handeld devices
 
 Steps to test:
 
-1. Open browser and navigate to [Poker Fun](https://gareth-mcgirr.github.io/Portfolio-Project-2-Poker-Fun/)
+1. Open browser and navigate to [JavaScript Quiz Game Multiple Choice](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice)
 2. Open the developer tools (right click and inspect)
 3. Set to responsive and decrease width to 320px
 4. Set the zoom to 50%
+5. Choose each responsive screen device using shortcut Cntrl + shift + m
 5. Click and drag the responsive window to maximum width
 
 Expected:
 
-Website is responsive on all screen sizes and no images are pixelated or stretched.
-No horizontal scroll is present.
-No elements overlap.
+The game to adapt per size, and stack elements on the smallest screen sizes.
 
 Actual:
 
 Website behaved as expected.
 
-Website was also opened on the following devices and no responsive issues were seen:
-
-- Oukitel C21 Pro
-- TCL 30 Pro
-- iPhone SE
-
 ### Accessibility
 
-[Wave Accessibility](https://wave.webaim.org/) tool was used throughout development and for final testing of the deployed website to check for any aid accessibility testing.
+[Wave Accessibility](https://wave.webaim.org/) tool was used as guid to make sure colour contrasts were fine and that there were no errors with any html attributes
 
 Testing was focused to ensure the following criteria were met:
 
-- All forms have associated labels or aria-labels so that this is read out on a screen reader to users who tab to form inputs
+- All link tags have correct path to stylesheets and script
+- Aria-labels were used for any links
 - Color contrasts meet a minimum ratio as specified in [WCAG 2.1 Contrast Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 - Heading levels are not missed or skipped to ensure the importance of content is relayed correctly to the end user
 - All content is contained within landmarks to ensure ease of use for assistive technology, allowing the user to navigate by page regions
@@ -137,11 +116,11 @@ Testing was focused to ensure the following criteria were met:
 
 Manual tests were also performed to ensure the website was accessible as possible and some accessibility issues were identified.
 
-Issue #1: Suits were not read to assistive technology.
+Issue #1: Styles not loading into website.
 
-Fix: A span was appended to the card elements to read the suit using the "sr-only" build in class so it was not displayed but is read to a screen reader. This was tested using windows narrator screen reader.
+Fix: Correct paths were given to link the documents together for all styles and JS technologies to work smoothly.
 
-Issue #2: Cards were not tabbable with the keyboard.
+Issue #2: .
 
 Fix: Cards were given the tabindex attribute with a value of 1 to ensure a keyboard can tab to them.
 
