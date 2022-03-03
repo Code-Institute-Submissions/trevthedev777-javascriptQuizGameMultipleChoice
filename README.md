@@ -1,108 +1,430 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Poker Fun
 
-Welcome trevthedev777,
+Poker Fun is a JavaScript game built to allow users to play a game of poker online for fun. It was built to work like the original poker arcade games and is single player.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Mock Up](docs/readme_images/mockup.PNG)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[Poker Fun Live Link](https://gareth-mcgirr.github.io/Portfolio-Project-2-Poker-Fun)
 
-## Gitpod Reminders
+## Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Site wide
+* Navigation Menu
+    * Contains links to the Home and Game pages and will be responsive on all devices.
+    * This will allow users to easily navigate between the pages within the site on any size device. 
 
-`python3 -m http.server`
+![Nav Menu image](docs/readme_images/navigation.PNG)
+* Footer
+    * This will contain a link to my GitHub page and a font awesome icon to make it more visually appealling. Link will open in a new tab when clicked.
+    * This will allow the user to follow me on my Github page
 
-A blue button should appear to click: _Make Public_,
+![Footer image](docs/readme_images/footer.PNG)
+* Favicon
+    * A site wide favicon will be implemented with a red poker chip.
+    * This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
 
-Another blue button should appear to click: _Open Browser_.
+![Favicon](docs/readme_images/favicon_image.PNG)
+* 404 Page
+    * A 404 page will be implemented and will display if a user navigates to a broken link.
+    * The 404 page will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need  of the browsers back button.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![404](docs/readme_images/404_image.PNG)
 
-A blue button should appear to click: _Make Public_,
+*Home Page*
 
-Another blue button should appear to click: _Open Browser_.
+- Game Instructions
+  - The home page content contains full game instructions so that the user is able to understand how to play the game.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Home Page Image](docs/readme_images/home_page.PNG)  
+- Game Start Button
+  - A button will be on the home page that when clicked will direct the user to the main poker game.
+  - This will allow the user to start the game after they have read and understood how the game works.
 
-To log into the Heroku toolbelt CLI:
+![Play game image](docs/readme_images/play_game_button.PNG)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+*Game Page*
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- Chip Balance
 
-------
+  - Below the main game area, the users current chips are displayed which is defaulted to 1000 starting chips when the user intiates game play. The users chip balance is displayed at all times. The chip balance is updated when the user bets or wins a hand.
+  - This will allow the user to keep track of how many chips they have in order to decide how much they would like to bet.
 
-## Release History
+![Chip balance image](docs/readme_images/current_chips.PNG)
+- Betting Functionality
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - Before the user initiates the round with the deal button, there is an input box that will allow them to bet some of their chips on the hand. The input is type number and is set to default at 10 and increments / decrements in multiples of 10. A user cannot bet more chips than their current chip balance.
+  - This will allow the user to gamble their chosen amount on each hand before the round is started.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![Chip bet image](docs/readme_images/bet_input.PNG)
+- Deal
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  - In order to start the poker hand, there will be a deal button just under the main table. When this button is clicked, it will draw the initial five cards for the poker hand.
+  - This will allow the user to start the hand once they have added their bet amount and are ready to proceed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![deal button image](docs/readme_images/deal_button.PNG)
+- Cards
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+  - The game board contains the cards for the poker game. A Maximum of five cards will be on the board at any one time. Initially cards will be face down before deal and will be shown faceup when deal button is clicked.
+  - This will allow the user to keep track of what cards are in their hand.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Cards face down image](docs/readme_images/cards_face_down.PNG)
+![Cards face up image](docs/readme_images/cards_face_up.PNG)
+- Hold
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+  - After the hand has been dealt and five cards are displayed on the game board, you can hold cards before drawing new ones. You keep the cards you hold and the remaining cards will be replaced with new ones. In order to hold the card, you click it and the card will appear to raise and visible text will be displayed with 'Hold'.
+  - This will allow users to keep the best cards from their hand.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![Cards hold image](docs/readme_images/cards_hold.PNG)
+- Draw
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+  - Once the user has decided which cards they want to hold, if any, they can click the draw button to get new cards.
+  - This will allow users to get new cards in an attempt to get a better hand than the original dealt cards.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![Cards face up image](docs/readme_images/draw_button.PNG)
+- Gamble Winnings   
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+  - If the user has a winning hand after they have drawn the cards, they will be given the option to gamble those winnings or bank the chips. The user will be presented with a single card and they have to guess whether the next card drawn will be higher or lower than the current card. This will be done by using the respective 'High and 'Low' buttons.
+  - If the user guesses wrong, they will lose the winnings.
+  - If the user guesses right, the winnings will be doubled on each successful guess up to a maximum of 5 cards on the table and winning chips will be added to the current chip balance.
+  - If the user decides to bank the winnings, the winning chips will be added to the current chip balance. The user will then be able to start the next hand.
+  - This will allow the user gamble and potentially increase their winning chips or take the safe option and bank the winnings.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![Cards hold image](docs/readme_images/gamble_winnings.PNG)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+*Winning Hands*
+- Royal Flush
+  - Ace, King, Queen, Jack and 10 of same suit
+    - Wins: Bet x 500
+           
+            
+- Straight Flush
+  - Any 5 cards of the same suit in order
+    - Wins: Bet x 60
+          
+           
+- 4 of a Kind
+  - 4 cards of the same value and any other card
+  - Wins: Bet x 25          
+- Full House
+  - 3 cards of same value and 2 cards of another value
+    - Wins: Bet x 10
+- Flush
+  - 5 cards of the same suit
+    - Wins: Bet x 5
+            
+- Straight
+  - Any 5 cards in order
+    - Wins: Bet x 4
+          
+- 3 of a Kind
+  - 3 cards of the same value
+    - Wins: Bet x 3
+            
+- 2 Pairs
+  - 2 pairs of the same value
+    - Wins: Bet x 2
+            
+- Pair - Jacks or Better
+  - pair of J, Q, K or A
+    - Wins: Bet x 1
+          
+![Cards hold image](docs/readme_images/winning_hands.PNG)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Features left to implement
+- Add functionality to play a head to head game against computer or other player online
+- Game sounds
+- Animated transitions for cards when being dealt eg. flipping each card around from face down to face up.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Wireframes
 
-------
+- Home page
 
-## FAQ about the uptime script
+![Home page wireframe](docs/wireframes/home_wireframes.JPG)
 
-**Why have you added this script?**
+- Game page
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Home page wireframe](docs/wireframes/game_page.JPG)
 
-**How will this affect me?**
+- 404 page
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![Home page wireframe](docs/wireframes/404_page.JPG)
+## Technolgies
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- HTML
+  - The structure of the Website was developed using HTML as the main language.
+- CSS
+  - The Website was styled using custom CSS in an external file.
+- JavaScript
+  - The game play logic was created using JavaScript in an external file.
+- Visual Studio Code
+  - The website was developed using Visual Studio Code IDE
+- GitHub
+  - Source code is hosted on GitHub and delpoyed using Git Pages.
+- Git
+  - Used to commit and push code during the development of the Website
+- Font Awesome
+  - Icon obtained from https://fontawesome.com/ was used for GitHub Icon in the footer.
+- Favicon.io
+  - favicon files were created at https://favicon.io/favicon-converter/
+- balsamiq
+  - wireframes were created using balsamiq from https://balsamiq.com/wireframes/desktop/#
+- Canva
+  - This was used to create the logo in header and make the images for cards 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Testing
 
-**So….?**
+### Responsiveness
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in [WCAG 2.1 Reflow criteria for responsive design](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) on Chrome, Edge, Firefox and Opera browsers.
 
-**Can I opt out?**
+Steps to test:
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+1. Open browser and navigate to [Poker Fun](https://gareth-mcgirr.github.io/Portfolio-Project-2-Poker-Fun/)
+2. Open the developer tools (right click and inspect)
+3. Set to responsive and decrease width to 320px
+4. Set the zoom to 50%
+5. Click and drag the responsive window to maximum width
+
+Expected:
+
+Website is responsive on all screen sizes and no images are pixelated or stretched.
+No horizontal scroll is present.
+No elements overlap.
+
+Actual:
+
+Website behaved as expected.
+
+Website was also opened on the following devices and no responsive issues were seen:
+
+- Oukitel C21 Pro
+- TCL 30 Pro
+- iPhone SE
+
+### Accessibility
+
+[Wave Accessibility](https://wave.webaim.org/) tool was used throughout development and for final testing of the deployed website to check for any aid accessibility testing.
+
+Testing was focused to ensure the following criteria were met:
+
+- All forms have associated labels or aria-labels so that this is read out on a screen reader to users who tab to form inputs
+- Color contrasts meet a minimum ratio as specified in [WCAG 2.1 Contrast Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+- Heading levels are not missed or skipped to ensure the importance of content is relayed correctly to the end user
+- All content is contained within landmarks to ensure ease of use for assistive technology, allowing the user to navigate by page regions
+- All not textual content had alternative text or titles so descriptions are read out to screen readers
+- HTML page lang attribute has been set
+- Aria properties have been implemented correctly
+- WCAG 2.1 Coding best practices being followed
+
+Manual tests were also performed to ensure the website was accessible as possible and some accessibility issues were identified.
+
+Issue #1: Suits were not read to assistive technology.
+
+Fix: A span was appended to the card elements to read the suit using the "sr-only" build in class so it was not displayed but is read to a screen reader. This was tested using windows narrator screen reader.
+
+Issue #2: Cards were not tabbable with the keyboard.
+
+Fix: Cards were given the tabindex attribute with a value of 1 to ensure a keyboard can tab to them.
+
+Issue #3: Cards were not held with the enter key so users could not hold the card unless clicked with a mouse.
+
+Fix: Cards were given an onkeyup event and called a new function which detects if the enter key was pressed and then clicks the card to allow the user to hold the card.
+
+**Navigation Links**
+
+Testing was performed to ensure all navigation links on the respective pages, navigated to the correct pages as per design. This was done by clicking on the navigation links on each page.
+
+| Navigation Link | Page to Load    |
+| --------------- | --------------- |
+| Home            | index.html      |
+| Play            | game.html       |
+
+Links on all pages navigated to the correct pages as exptected.
+
+**Footer Link**
+
+Testing was performed to ensure the GitHub icon in the footer opened the github profile of Gareth-McG in a new tab. This was done by clicking the GitHub icon.
+
+Gareth-McG's Github profile opened in a new tab.
+
+**Game Play**
+
+**Winning Hands**
+
+All hands were tested to ensure they were recorded as the correct 'winning hands' with the correct multipliers. This was done by stubbing the hands using the following arrays:
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+Royal Flush Test
+myHand[0] = deck[09];
+myHand[1] = deck[10];
+myHand[2] = deck[11];
+myHand[3] = deck[12];
+myHand[4] = deck[0];
+
+Straight Flush Test
+myHand[0] = deck[31];
+myHand[1] = deck[32];
+myHand[2] = deck[33];
+myHand[3] = deck[34];
+myHand[4] = deck[35];
+
+Flush Test
+myHand[0] = deck[47];
+myHand[1] = deck[44];
+myHand[2] = deck[51];
+myHand[3] = deck[41];
+myHand[4] = deck[45];
+
+4 of a kind Test
+myHand[0] = deck[7];
+myHand[1] = deck[20];
+myHand[2] = deck[33];
+myHand[3] = deck[46];
+myHand[4] = deck[43];
+
+Full House
+myHand[0] = deck[4];
+myHand[1] = deck[17];
+myHand[2] = deck[36];
+myHand[3] = deck[49];
+myHand[4] = deck[10];
+
+Straight
+myHand[0] = deck[15];
+myHand[1] = deck[3];
+myHand[2] = deck[4];
+myHand[3] = deck[31];
+myHand[4] = deck[45];
+
+Straight A2345
+myHand[0] = deck[0];
+myHand[1] = deck[14];
+myHand[2] = deck[28];
+myHand[3] = deck[42];
+myHand[4] = deck[4];
+
+3 of a kind
+myHand[0] = deck[11];
+myHand[1] = deck[24];
+myHand[2] = deck[37];
+myHand[3] = deck[31];
+myHand[4] = deck[41];
+
+2 pair
+myHand[0] = deck[35];
+myHand[1] = deck[48];
+myHand[2] = deck[51];
+myHand[3] = deck[12];
+myHand[4] = deck[18];
+
+pair of queens
+myHand[0] = deck[24];
+myHand[1] = deck[50];
+myHand[2] = deck[43];
+myHand[3] = deck[12];
+myHand[4] = deck[18];
 ```
+All hands functioned as expected and gave the correct types and winnings.
 
-**Anything more?**
+**Hold Cards**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Testing was performed to ensure cards could be held and when new cards were drawn, the selected cards remained. Thhis was done by selecting 2 cards from the dealt cards, then pressing the draw button.
 
----
+When new cards were drawn, the held cards were still in the drawn cards as expected.
 
-Happy coding!
+**Game Board**
+
+Testing was done to ensure the correct messages were displayed at the appropriate time by playing the game. The following messages are displayed:
+
+* No winning hand - Displayed when no winning hand has been dealt.
+* Place bet instructions - Shown when facedown cards are drawn.
+* Hold card instructions - Shown after user has clicked the 'Deal' button.
+* Winning hand name displayed - Shown if winning hand after user has clicked the draw button after a deal/hold.
+* High low instructions - Shown during high low game that is initiated if a user had a winning hand.
+* Lose High/Lo with wrong High guess - Shown if user guesses 'High' but the card drawn was a lower value than the previous card.
+* Lose High/Lo with wrong Low guess - Shown if user guesses 'Low' but the card drawn was a higher value than the previous card.
+
+All messages were displayed as expected.
+
+**High/Low**
+
+High/Low game was tested to ensure the game functioned as expected by playing the game:
+* If the card drawn was higher and the user clicked the "High" button, that the next card was drawn as expected.
+* If the card drawn was lower and the user clicked the "Low" button, that the next card was drawn as expected.
+* If the card drawn was lower and the user clicked the "High" button, that the next card was not drawn and the High/Low game ends as expected.
+* If the card drawn was lower and the user clicked the "High" button, that the next card was not drawn and the High/Low game ends as expected.
+* If the maximum limit of 5 cards has been drawn, the high low game ends and winnings are added to the current chip balance as expected.
+* At any stage in the High/Lo game, if the 'Bank Winnings' button is clicked, the current winnings are added to the current chips value.
+
+**Validator Testing**
+
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+
+![Home HTML Validator Results](docs/readme_images/home_validator.PNG)
+
+![Game Page](docs/readme_images/game_validator.PNG)
+
+![404 Page](docs/readme_images/404_validator.PNG)
+
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
+
+![CSS Validator Results](docs/readme_images/css_validator.PNG)
+
+- JavaScript
+  - No errors were returned when passing through the [JShint validator](https://jshint.com/)
+  - A warning appeared for one function as an unused variable but the function is being used directly as an onkeyup event on the card divs.
+
+![JavaScript Validator Results](docs/readme_images/js_validator.PNG)
+
+**Lighthouse Report**
+
+Lighthouse report generated showed a 93 SEO rating due to no meta descriptions. Meta descriptions were then added to the page to raise this. The lowest score on any section was 94 for performance.
+
+![Lighthouse report](docs/readme_images/lighthouse.PNG)
+
+
+## Deployment
+
+### Version Control
+
+The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘Portfolio-Project-2-Poker-Fun’.
+
+The following git commands were used throughout development to push code to the remote repo:
+
+```git add <file>``` - This command was used to add the file(s) to the staging area before they are committed.
+
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queue ready for the final step.
+
+```git push``` - This command was used to push all committed code to the remote repository on github.
+
+### Deployment to Github Pages
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the menu on left select 'Pages'
+  - From the source section drop-down menu, select the Branch: main
+  - Click 'Save'
+  - A live link will be displayed in a green banner when published successfully.
+
+The live link can be found here - https://gareth-mcgirr.github.io/Portfolio-Project-2-Poker-Fun
+
+### Clone the Repository Code Locally
+
+Navigate to the GitHub Repository you want to clone to use locally:
+
+- Click on the code drop down button
+- Click on HTTPS
+- Copy the repository link to the clipboard
+- Open your IDE of choice (git must be installed for the next steps)
+- Type git clone copied-git-url into the IDE terminal
+
+The project will now have been cloned on your local machine for use.
+
+## Credits 
+
+* [Create the deck of cards and shuffle](https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript)
+    * Code was used from this site to create the deck of cards and shuffle. Styles were changed to suit styling on my Website.
+* Website Logo and felt background image was created by my wife [Daisy McGirr](https://github.com/Daisy-McG) using Canva.
+* My Mentor Chris Quinn for his guidance and support throughout my project.
