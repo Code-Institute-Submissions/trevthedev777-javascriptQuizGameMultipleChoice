@@ -113,8 +113,9 @@ function getNewQuestion() {
     // keeps track of the current score
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
-
-        return window.location.assign('/end.html')
+        
+        // loads into end.html
+        return window.location.assign('./end.html')
     }
 
     questionCounter++;
