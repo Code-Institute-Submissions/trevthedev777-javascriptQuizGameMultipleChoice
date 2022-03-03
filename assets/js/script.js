@@ -140,6 +140,8 @@ function getNewQuestion() {
 }
 
 choices.forEach(choice => {
+
+    // selecting an answer
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
 
@@ -157,7 +159,7 @@ choices.forEach(choice => {
         // adds the correct class whenever the corrrect question is selected
         selectedChoice.parentElement.classList.add(classToApply);
 
-        // sets time for us to see what the right or wrong answer is
+        // sets time to automaically go to the next question after submitting an answer, does not show the right answer so user plays again
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion()
@@ -172,50 +174,3 @@ incrementScore = num => {
 
 startGame();
 
-// // end of game
-// const username = document.querySelector('#username');
-// const saveScore = document.querySelector('#saveScoreBtn');
-// const finalScore = document.querySelector('#finalScore');
-// const mostRecentScore = document.querySelector('#mostRecentScore');
-
-// // save score to your local storage
-// const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-
-// // saves only 5 highest scores
-// const MAX_HIGH_SCORES = 5;
-// finalScore.innerText = mostRecentScore;
-
-// // event Listeners
-// username.addEventListener('keyup', () => {
-//     saveScoreBtn.disabled = !username.value
-// })
-
-// saveHighScore = e => {
-//     e.preventDefault()
-
-//     const score = {
-//         score: mostRecentScore,
-//         name: username.value
-//     }
-
-//     highScores.push(score);
-
-//     highScores.sort((a,b) => {
-//         return b.score - a.score
-//     });
-
-//     highScores.splice(5);
-
-//     localStorage.setItem('highScores', JSON.stringify(highScores));
-//     window.location.assign('/');
-// }
-
-// // highscores page
-
-// const highScoresList = document.querySelector('#highScoresList');
-// const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-
-// // create a new array for names and key value pairs and displays them in a list
-// highScoresList.innerHTML = highScores.map(score => {
-//     return `<li class='high-score>${score.name} - ${score.score}`
-// }).join('');
