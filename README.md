@@ -1,10 +1,10 @@
-# Poker Fun
+# JavaScript Quiz Game
 
-Poker Fun is a JavaScript game built to allow users to play a game of poker online for fun. It was built to work like the original poker arcade games and is single player.
+My JS quiz game is a general knowledge quiz of 10 questions, it is a single player game that calculates your score but 100 per every correct answer
 
-![Mock Up](docs/readme_images/mockup.PNG)
+![Mock Up](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/mockUp.png?raw=true)
 
-[Poker Fun Live Link](https://gareth-mcgirr.github.io/Portfolio-Project-2-Poker-Fun)
+[JavaScript Quiz Game Live Link](https://trevthedev777.github.io/javascriptQuizGameMultipleChoice/)
 
 ## Features
 
