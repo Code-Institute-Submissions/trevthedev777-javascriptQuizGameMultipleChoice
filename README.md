@@ -11,6 +11,7 @@ My JS quiz game is a general knowledge quiz of 10 questions, it is a single play
 ### Site wide
 * Navigation Menu
     * Home screen only has a link to start the game into the first question
+    * This will allow the user to start the game when they are ready
 ![Nav Menu image](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/home%20screen.png?raw=true)
 
 * Favicon
@@ -26,7 +27,7 @@ My JS quiz game is a general knowledge quiz of 10 questions, it is a single play
 
 *Home Page*
 
-- Start game link to take the user staright to the first question
+- Start game link to take the user straight to the first question
 
 ![Home Page Image](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/home%20screen.png?raw=true)  
 
@@ -192,9 +193,13 @@ All displays and tranistions displayed correctly
 ![CSS Validator Results]()
 
 - JavaScript
-  - No errors were returned when passing through the [JShint validator](https://jshint.com/)
+  - No errors were returned when passing through the script.js in validtor [JShint validator](https://jshint.com/)
 
-![JavaScript Validator Results]()
+![script.js Validator Results]()
+
+- No errors were returned when passing through the end.js in validtor [JShint validator](https://jshint.com/)
+
+![end.js Validator Results]()
 
 **Lighthouse Report**
 
