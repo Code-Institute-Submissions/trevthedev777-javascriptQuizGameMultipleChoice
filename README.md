@@ -10,20 +10,14 @@ My JS quiz game is a general knowledge quiz of 10 questions, it is a single play
 
 ### Site wide
 * Navigation Menu
-    * Contains links to the Home and Game pages and will be responsive on all devices.
-    * This will allow users to easily navigate between the pages within the site on any size device. 
+    * Home screen only has a link to start the game into the first question
+![Nav Menu image](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/home%20screen.png?raw=true)
 
-![Nav Menu image](docs/readme_images/navigation.PNG)
-* Footer
-    * This will contain a link to my GitHub page and a font awesome icon to make it more visually appealling. Link will open in a new tab when clicked.
-    * This will allow the user to follow me on my Github page
-
-![Footer image](docs/readme_images/footer.PNG)
 * Favicon
     * A site wide favicon will be implemented with a red poker chip.
     * This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
-
 ![Favicon](docs/readme_images/favicon_image.PNG)
+
 * 404 Page
     * A 404 page will be implemented and will display if a user navigates to a broken link.
     * The 404 page will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need  of the browsers back button.
