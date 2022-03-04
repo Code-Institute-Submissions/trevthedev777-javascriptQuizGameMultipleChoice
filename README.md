@@ -131,7 +131,7 @@ Fix: renamed the document to the correct name.
 
 Issue #4: Total correct score not calculating at the end of the game
 
-Fix:
+Fix: Added a new js file saving the local session score
 
 Issue #5: Hover effect not working on buttons
 
@@ -139,7 +139,6 @@ Fix: renamed elemts to corresponding class names
 
 Issue #6: Progress Bar not incrementing per question
 
-Fix: targeted the empty progress bar value using the DOM
 
 **Navigation Links**
 
