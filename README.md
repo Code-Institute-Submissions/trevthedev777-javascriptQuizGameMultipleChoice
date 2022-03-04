@@ -15,9 +15,9 @@ My JS quiz game is a general knowledge quiz of 10 questions, it is a single play
 ![Nav Menu image](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/home%20screen.png?raw=true)
 
 * Favicon
-    * A site wide favicon will be implemented with a red poker chip.
+    * A site wide favicon will be implemented with a red question mark.
     * This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
-![Favicon](docs/readme_images/favicon_image.PNG)
+![Favicon](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/favicon.png?raw=true)
 
 * 404 Page
     * A 404 page will be implemented and will display if a user navigates to a broken link.
