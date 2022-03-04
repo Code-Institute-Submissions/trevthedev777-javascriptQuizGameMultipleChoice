@@ -189,7 +189,7 @@ All displays and tranistions displayed correctly
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
 
-![CSS Validator Results]()
+![CSS Validator Results](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/css%20validated.png?raw=true)
 
 - JavaScript
   - No errors were returned when passing through the script.js in validtor [JShint validator](https://jshint.com/)
@@ -202,9 +202,9 @@ All displays and tranistions displayed correctly
 
 **Lighthouse Report**
 
+Lighthouse report reported a good performance of 96, Accessability of 100, best practices of 100 and the SEO was 91
 
-
-![Lighthouse report]()
+![Lighthouse report](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/lighthouse%20report.png?raw=true)
 
 
 ## Deployment
@@ -246,4 +246,12 @@ The project will now have been cloned on your local machine for use.
 
 ## Credits 
 
-* 
+* Daisy Mcgirr for being a one of a kind mentor and helping me undertsand my work
+* Readme inspired by Gareth McGirr - https://github.com/Gareth-McGirr/Portfolio-Project-2-Poker-Fun
+* Dave Hoorocks for assiting me with my asiignment and working through code with me
+* Phumlani Mbabela for debugging and explanations of the games functionality
+* Code snippets of uppercase variables inspired by : [freeCodeCamp](https://www.freecodecamp.org/news/when-to-capitalize-your-javascript-constants-4fabc0a4a4c4/)
+* ProgressBar inspired by [w3schools](https://www.w3schools.com/howto/howto_js_progressbar.asp), simplified code helped by Phulmani Mbabela
+* The Code Institute Tutoring service
+* Idea of quiz inspired by [sitepoint](https://www.sitepoint.com/simple-javascript-quiz/)
+* Tutorials followed [keep_coding](https://www.youtube.com/watch?v=MxrGPP4F8Sc)
