@@ -193,12 +193,9 @@ All displays and tranistions displayed correctly
 
 - JavaScript
   - No errors were returned when passing through the script.js in validtor [JShint validator](https://jshint.com/)
+  - No errors were returned when passing through the end.js in validtor [JShint validator](https://jshint.com/)
 
-![script.js Validator Results]()
 
-- No errors were returned when passing through the end.js in validtor [JShint validator](https://jshint.com/)
-
-![end.js Validator Results]()
 
 **Lighthouse Report**
 

@@ -152,7 +152,7 @@ choices.forEach(choice => {
         if (!acceptingAnswers) return;
 
         // save final score on end game screen
-        sessionStorage.setItem('score', SCORE_POINTS);
+        sessionStorage.setItem('score', score);
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
