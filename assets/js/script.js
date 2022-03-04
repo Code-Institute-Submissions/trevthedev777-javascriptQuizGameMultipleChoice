@@ -5,12 +5,14 @@ const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
+// game play variables
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+// Questions for the game
 let questions = [
     {
         question: 'What year did South Africa host its first democratic elections?',
@@ -92,7 +94,7 @@ let questions = [
         choice4: 'Five',
         answer: 2,
     }
-]
+];
 
 // capitilazed variables means the variable will be fixed and unchanged throughout the game
 const SCORE_POINTS = 100;
@@ -103,7 +105,7 @@ function startGame() {
     // starting variables
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions] // Spread Operator accesses all questions in the array
+    availableQuestions = [...questions]; // Spread Operator accesses all questions in the array
     getNewQuestion();
 
 }
@@ -112,12 +114,13 @@ function getNewQuestion() {
     
     // keeps track of the current score
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score)
+        localStorage.setItem('mostRecentScore', score);
         
         // loads into end.html
-        return window.location.assign('./end.html')
+        return window.location.assign('./end.html');
     }
 
+    // increase question
     questionCounter++;
 
     // this will count the questions like 1 of 10 etc...
@@ -140,13 +143,16 @@ function getNewQuestion() {
     acceptingAnswers = true;
 }
 
+
+// Iteration for selecting the answers and values for them
 choices.forEach(choice => {
 
     // selecting an answer
     choice.addEventListener('click', e => {
-        if (!acceptingAnswers) return
+        if (!acceptingAnswers) return;
 
-        sessionStorage.setItem('score', score);
+        // save final score on end game screen
+        sessionStorage.setItem('score', SCORE_POINTS);
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
@@ -164,11 +170,12 @@ choices.forEach(choice => {
         // sets time to automaically go to the next question after submitting an answer, does not show the right answer so user plays again
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion()
-        }, 1000)
-    })
-})
+            getNewQuestion();
+        }, 1000);
+    });
+});
 
+// Increment score 
 incrementScore = num => {
     score +=num;
     scoreText.innerText = score;
