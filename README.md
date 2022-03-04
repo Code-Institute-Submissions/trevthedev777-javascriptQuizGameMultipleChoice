@@ -16,7 +16,7 @@ My JS quiz game is a general knowledge quiz of 10 questions, it is a single play
 
 * Favicon
     * A site wide favicon will be implemented with a red question mark.
-    * This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
+    * This will provide an image in the the tabs header to allow the user to easily identify the website if they many tabs open.
 ![Favicon](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/favicon.png?raw=true)
 
 * 404 Page
